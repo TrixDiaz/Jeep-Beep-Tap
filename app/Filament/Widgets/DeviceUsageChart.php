@@ -30,6 +30,6 @@ class DeviceUsageChart extends ChartWidget
 
     protected function getType(): string
     {
-        return 'pie';
+        return 'doughnut';
     }
 }
