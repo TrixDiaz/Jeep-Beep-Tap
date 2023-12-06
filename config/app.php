@@ -172,6 +172,7 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
         Ixudra\Curl\CurlServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -186,6 +187,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
         // 'Example' => App\Facades\Example::class,
         'Curl'          => Ixudra\Curl\Facades\Curl::class,
     ])->toArray(),

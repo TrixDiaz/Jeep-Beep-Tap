@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\NotificationController;
+use Jenssegers\Agent\Agent;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,25 @@ use App\Http\Controllers\NotificationController;
 
 
 Route::get('/', function () {
+    $agent = new Agent();
+    $deviceInfo = $agent->device(); // Get device information
+    $browserInfo = $agent->browser(); // Get browser information
+
+    if($agent->isDesktop()){
+        // Insert into the database
+        \App\Models\Usage::create([
+            'device' => $deviceInfo,
+            'browser' => $browserInfo,
+            'usage' => 'Desktop'
+        ]);
+
+    } else if($agent->isMobile()){
+        \App\Models\Usage::create([
+            'device' => $deviceInfo,
+            'browser' => $browserInfo,
+            'usage' => 'Mobile'
+        ]);
+    }
     return view('welcome');
 });
 
