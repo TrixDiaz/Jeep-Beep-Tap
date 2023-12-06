@@ -24,7 +24,7 @@
     </style>
 </head>
 
-<body class="antialiased scroll-smooth">
+<body class="antialiased scroll-smooth dark:bg-slate-900">
     <header>
         <nav data-aos="fade-down" data-aos-duration="1000"
             class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 fixed top-0 z-30 w-full border-b ">
@@ -212,7 +212,7 @@
         </div>
     </section>
     <!-- about end -->
-    <section class="bg-gray-50">
+    <section class="bg-gray-50 dark:bg-gray-800 ">
         <div data-aos="fade-dowm" data-aos-duration="2000"
             class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
