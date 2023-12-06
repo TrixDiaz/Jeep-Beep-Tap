@@ -70,13 +70,16 @@ class UserResource extends Resource
                         ->relationship(name: 'permissions', titleAttribute: 'name')
                         ->searchable()
                         ->preload(),
-                    Radio::make('email_verified_at')
-                        ->label('Account Activation')
-                        ->options([
-                            Carbon::now('Asia/Manila')->format('Y-m-d H:i') => 'Activate',
-                        ])
-                        ->visible(fn ($record) => $record->email_verified_at === null)
-                        ->inline(false),
+//                    Radio::make('email_verified_at')
+//                        ->label('Account Activation')
+//                        ->options([
+//                            Carbon::now('Asia/Manila')->format('Y-m-d H:i') => 'Activate',
+//                        ])
+//                        ->visible(fn ($record) => $record->email_verified_at === null)
+//                        ->inline(false),
+                   Forms\Components\DatePicker::make('email_verified_at')
+                    ->label('Activation Date')
+                    ->visible('create'),
                 ])
                 ->columns(2),
         ]);
