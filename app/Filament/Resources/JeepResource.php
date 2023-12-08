@@ -39,7 +39,8 @@ class JeepResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form->schema([
+        return $form->title('Assign Jeep') // Change the form title here
+            ->schema([
             Fieldset::make('Jeep')->schema([
                 TextInput::make('jnumber')
                     ->label('Plate Number')
@@ -70,7 +71,7 @@ class JeepResource extends Resource
                             '' => 'Reset',
                             Carbon::now('Asia/Manila')->format('H:i') => 'Add to Jeep Queue',
                         ])
-                       
+
                         ->native(false),
                 ])
                 ->columns(2),
