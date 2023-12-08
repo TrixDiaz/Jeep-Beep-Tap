@@ -1,6 +1,6 @@
 <div>
     <div
-        class="bg-center bg-[url('/image/jeep.png')]">
+        class="bg-center" style="background-image: url('https://images-ext-2.discordapp.net/external/eul_jNkb3GCFL824DSgSp2yTNnja3iJmaiVF4G6MjSc/https/newsinfo.inquirer.net/files/2017/12/20171211MB-08.jpg?format=webp&width=1671&height=1174')">
         <div class="flex items-center justify-center h-80 fit pt-4 px-10">
             <form wire:submit.prevent="search" class="mb-4 sm:w-1/2 lg:w-1/3 z-10">
                 <div class="flex flex-col">
