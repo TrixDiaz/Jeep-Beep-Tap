@@ -36,7 +36,7 @@
                            <p class="text-center"> All content and materials available on the Terminal Jeep Company platform, including but not limited to logos, text, graphics, images, and software, are the property of Terminal Jeep Company and are protected by intellectual property laws. </p>
                         </li>
                     </ul>
-                    <a href="/register" class="uppercase text-md bg-yellow-300 p-3 rounded-lg">Back</a>
+                    <a href="/" class="uppercase text-md bg-yellow-300 p-3 rounded-lg">Back</a>
                 </div>
 
             </div>

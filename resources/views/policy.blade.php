@@ -42,7 +42,7 @@
                             For any inquiries or concerns regarding these terms, please contact us at [help@actona.com]. </p>
                         </li>
                     </ul>
-                    <a href="/register" class="uppercase text-md bg-yellow-300 p-3 rounded-lg">Back</a>
+                    <a href="/" class="uppercase text-md bg-yellow-300 p-3 rounded-lg">Back</a>
                 </div>
             </div>
         </div>
