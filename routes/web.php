@@ -20,10 +20,10 @@ use Jenssegers\Agent\Agent;
 |
 */
 Route::get('/terms', function () {
-   return view('terms');
+   return view('terms')->name('terms');
 });
 Route::get('/policy', function () {
-    return view('policy');
+    return view('policy')->name('policy');
 });
 
 Route::get('/', function () {
