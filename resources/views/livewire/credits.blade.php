@@ -3,8 +3,7 @@
         <div class="flex justify-between">
             <div>
                 <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                    {{ __('Title for Credits') }}
-                    <p class="text-slate-500 text-sm py-2">Additional Subtitle here</p>
+                    <p class="text-slate-500 text-sm py-2">Top-up your card</p>
                 </h2>
             </div>
             @role(3)
@@ -226,20 +225,20 @@
                         <div class="w-full px-8 absolute top-8">
                             <div class="flex justify-between">
                                 <div class="pt-10">
-                                    <p class="font-light">
+                                    <p class="font-light text-2xl">
                                         Name
                                         </h1>
-                                    <p class="font-medium tracking-widest">
+                                    <p class="font-medium tracking-widest text-2xl">
                                         {{ Auth::user()->name }}
                                     </p>
                                 </div>
                                 <img class="w-14 h-14" src="/image/masterCard.png" />
                             </div>
                             <div class="pt-10">
-                                <p class="font-light">
+                                <p class="font-light text-2xl">
                                     Card Number
                                     </h1>
-                                <p class="font-medium tracking-more-wider">
+                                <p class="font-medium tracking-more-wider text-2xl">
                                     @if ($cardSerial !== null)
                                         {{ $cardSerial }}
                                     @else
@@ -250,27 +249,27 @@
                             <div class="pt-16 pr-6">
                                 <div class="flex justify-between">
                                     <div class="">
-                                        <p class="font-light text-xs">
+                                        <p class="font-light text-xl">
                                             Valid
                                             </h1>
-                                        <p class="font-medium tracking-wider text-sm">
+                                        <p class="font-medium tracking-wider text-xl">
                                             11/15
                                         </p>
                                     </div>
                                     <div class="">
-                                        <p class="font-light text-xs">
+                                        <p class="font-light text-xl">
                                             Expiry
                                             </h1>
-                                        <p class="font-medium tracking-wider text-sm">
+                                        <p class="font-medium tracking-wider text-xl">
                                             03/25
                                         </p>
                                     </div>
 
                                     <div class="">
-                                        <p class="font-light text-xs">
+                                        <p class="font-light text-xl">
                                             Balance
                                             </h1>
-                                        <p class="font-bold tracking-more-wider text-sm">
+                                        <p class="font-bold tracking-more-wider text-xl">
                                             {{ $cardBalance }}
                                         </p>
                                     </div>

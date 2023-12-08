@@ -31,9 +31,11 @@
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="#home" class="flex items-center">
                     <img src="./image/acebedo_logo_orig.png" class="mr-3 h-6 sm:h-9" alt="" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Modern
-                        Jeepneys(ACTONA)</span>
-                </a>
+                    <div class="shrink-0 flex items-center">
+                    <a href="{{ route('dashboard') }}">
+                        <x-application-mark class="block h-9 w-auto" />
+                </div>
+        </a>
                 <div class="flex items-center lg:order-2">
                     @if (Route::has('login'))
                         @auth
@@ -100,17 +102,17 @@
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex h-[32rem]">
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 rounded py-1 px-5">
                     <div data-aos="fade-left" data-aos-duration="1000" class="container auto">
-                        <img src="https://media.discordapp.net/attachments/1101129291619647582/1181981450149580852/IMG_7832.jpg?ex=65830901&is=65709401&hm=c8be03724d5b72d151244706f754d01f03cbf1e445851adafcff67e8839bfc6d&=&format=webp&width=561&height=421"
+                        <img src="https://newsinfo.inquirer.net/files/2017/12/20171211MB-08.jpg"
                             alt="" class="rounded h-40 w-full object-cover sm:h-56 md:h-full skew-y-6" />
                     </div>
                     <div data-aos="fade-left" data-aos-duration="2000"
                         class="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
                         <img alt=""
-                            src="https://media.discordapp.net/attachments/1101129291619647582/1181982069912518677/IMG_7831.jpg?ex=65830995&is=65709495&hm=a05aff5040e40ae72be8e6f8e2b222a86fdbccc31a8f08adccb4d4bdc4b61a62&=&format=webp&width=561&height=421"
+                            src="https://sa.kapamilya.com/absnews/abscbnnews/media/2018/news/04/03/20180403_dotr-puv-modernization-expo-gc-1869.jpg?ext=.jpg"
                             class="rounded h-40 w-full object-cover object- sm:h-56 md:h-full skew-y-6" />
 
                         <img alt=""
-                            src="https://res.cloudinary.com/drcyxqm6p/image/upload/v1692721210/modern-jeepney_2019-10-04_02-53-09_cbcvtx.jpg"
+                            src="https://newsinfo.inquirer.net/files/2017/12/20171211MB-08.jpg"
                             class="rounded h-40 w-full object-cover object-left sm:h-56 md:h-full skew-y-6" />
                     </div>
                 </div>
@@ -231,7 +233,6 @@
                 </p>
                 <a href="{{ route('login') }}"
                     class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                    Get Started
 
                     <i class="fa fa-chevron-right ml-1 mt-1 text-[1.2rem]" aria-hidden="true"></i>
                 </a>
@@ -266,14 +267,14 @@
                         <div class="mt-12 lg:mt-0">
                             <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
                                 style="color: hsl(218, 81%, 95%)">
-                                Modern Jeepney<br /><span style="color: hsl(218, 81%, 75%)">Since 1930</span>
+                                Modern Jeepney<br /><span style="color: hsl(218, 81%, 75%)">Since 2015</span>
                             </h1>
                             <a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
-                                data-mdb-ripple="true" data-mdb-ripple-color="light" href=""
-                                role="button">Schedule your Day</a>
+                                data-mdb-ripple="true" data-mdb-ripple-color="light" href="https://www.facebook.com/ACTONACorp') }}"
+                                role="button">Contact Us</a>
                         </div>
                         <div class="mb-12 lg:mb-0">
-                            <img src="https://res.cloudinary.com/drcyxqm6p/image/upload/v1692721211/Prototype_Isuzu_Modern_Jeepney_2_i7j8a0.jpg"
+                            <img src="https://www.rappler.com/tachyon/2023/03/IMG_1841.jpg?fit=1024%2C1024"
                                 class="w-full rounded-lg shadow-lg" alt="" />
                         </div>
                     </div>
@@ -449,10 +450,10 @@ behind the sunshine mall
                         </h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="mailto:help@actonacloud.online" class="hover:underline">File Complain</a>
+                            <a href="mailto:actonacloud@gmail.com" class="hover:underline">File Complain</a>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/messages/t/100005497698072" class="hover:underline">Message Us</a>
+                            <a href="https://www.facebook.com/messages/t/100128856034886" class="hover:underline">Message Us</a>
                             </li>
                         </ul>
                     </div>
@@ -463,9 +464,6 @@ behind the sunshine mall
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
                                 <a href="https://www.facebook.com/ACTONACorp" class="hover:underline">Facebook</a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/actonagroup/" class="hover:underline">Instagram</a>
                             </li>
                         </ul>
                     </div>
@@ -493,9 +491,6 @@ behind the sunshine mall
                 <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <a href="https://www.facebook.com/ACTONACorp" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         <i class="fa fa-facebook-official text-[1.2rem]" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.instagram.com/actonagroup/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                        <i class="fa fa-instagram text-[1.2rem]" aria-hidden="true"></i>
                     </a>
                     {{-- <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         <i class="fa fa-twitter text-[1.2rem]" aria-hidden="true"></i>
