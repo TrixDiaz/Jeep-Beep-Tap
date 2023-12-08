@@ -26,7 +26,7 @@
                         {{-- Your content for users with the desired role --}}
                     @else
                         {{-- Your content for users without the desired role --}}
-                        <x-nav-link wire:navigate href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                             {{ __('Dashboard') }}
                         </x-nav-link>
                     @endif
