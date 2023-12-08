@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources;
 
+use App\Models\Fares;
 use Filament\Forms;
 use App\Models\Card;
 use App\Models\User;
+use Filament\Forms\Set;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -40,10 +42,22 @@ class CardResource extends Resource
         Fieldset::make('Users Belongs this Card')
         ->schema([
             Select::make('name')
-                    ->label('Name')
-                    ->searchable()
-                    ->options(User::all()->pluck('name', 'name'))
-                    ->columnSpanFull(),
+                ->label('Name')
+                ->searchable()
+                ->options(User::all()->pluck('name', 'name'))
+                ->live()
+                ->afterStateUpdated(function (Set $set, ?string $state) {
+                    $jeep = User::where('name', $state)->first();
+                    if ($jeep) {
+                        $set('email', $jeep->email);
+
+                    }
+                }),
+            TextInput::make('email')
+                ->label('Email')
+                ->rules('required')
+                ->readOnly()
+                ->disabledOn('edit'),
         ]),
                 TextInput::make('card_id')
                     ->label('Card Serial')
@@ -51,15 +65,15 @@ class CardResource extends Resource
                     ->maxLength(255)
                     ->required()
                     ->disabledOn('edit'),
-                    
+
                 TextInput::make('wallet_id')
                 ->label('Wallet Serial'),
     ])->columns(2),
 
-            
-           
-            
-            
+
+
+
+
         ]);
     }
 
@@ -69,16 +83,16 @@ class CardResource extends Resource
             ->columns([
                 TextColumn::make('card_id')
                  ->label('Card ID')
-                 ->toggleable(isToggledHiddenByDefault: false), 
+                 ->toggleable(isToggledHiddenByDefault: false),
             TextColumn::make('card_balance')
                 ->label('Card Balance')
-                ->toggleable(isToggledHiddenByDefault: true), 
+                ->toggleable(isToggledHiddenByDefault: true),
             TextColumn::make('wallet_id')
                 ->label('Wallet ID')
-                ->toggleable(isToggledHiddenByDefault: false), 
+                ->toggleable(isToggledHiddenByDefault: false),
             TextColumn::make('wallet_balance')
                 ->label('Wallet Balance')
-                ->toggleable(isToggledHiddenByDefault: true), 
+                ->toggleable(isToggledHiddenByDefault: true),
             TextColumn::make('name')
                 ->label('Owner')
                   ->toggleable(isToggledHiddenByDefault: false),
