@@ -14,7 +14,7 @@
 
                 {{-- Title --}}
                 <div class="mx-5 hidden space-x-8 sm:-my-px sm:ml-10 sm:flex uppercase">
-                    <x-nav-link>
+                    <x-nav-linkwire:navigate href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Actona') }}
                     </x-nav-link>
                 </div>
