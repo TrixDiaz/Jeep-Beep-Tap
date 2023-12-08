@@ -475,10 +475,10 @@ behind the sunshine mall
                         </h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Privacy Policy</a>
+                                <a href="policy.blade.php" class="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                <a href=terms.blade.php class="hover:underline">Terms &amp; Conditions</a>
                             </li>
                         </ul>
                     </div>
