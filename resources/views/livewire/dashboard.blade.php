@@ -1,10 +1,10 @@
 <div>
     <div
-        class="bg-center bg-[url('https://res.cloudinary.com/drcyxqm6p/image/upload/v1683475050/samples/landscapes/nature-mountains.jpg')]">
+        class="bg-center bg-[url('https://newsinfo.inquirer.net/files/2017/12/20171211MB-08.jpg')]">
         <div class="flex items-center justify-center h-80 fit pt-4 px-10">
             <form wire:submit.prevent="search" class="mb-4 sm:w-1/2 lg:w-1/3 z-10">
                 <div class="flex flex-col">
-                    <p class="uppercase font-semibold text-md text-emerald-50">Actona Jeep Terminal</p>
+                    <p class="uppercase font-semibold text-md text-black text-2xl">Actona Jeep Terminal</p>
                 </div>
                 <div class="flex flex-row py-2">
                     {{-- Location Button --}}

@@ -7,7 +7,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('List of all Travel Trips') }}
-            <p class="text-slate-500 text-sm py-2">Additional Subtitle here</p>
+            <p class="text-slate-500 text-sm py-2"></p>
         </h2>
     </x-slot>
 
