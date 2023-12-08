@@ -70,7 +70,7 @@ class JeepResource extends Resource
                             '' => 'Reset',
                             Carbon::now('Asia/Manila')->format('H:i') => 'Add to Jeep Queue',
                         ])
-                        ->visibleOn(['edit','create'])
+                       
                         ->native(false),
                 ])
                 ->columns(2),
