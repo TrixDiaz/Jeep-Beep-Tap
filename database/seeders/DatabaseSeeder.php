@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         // \App\Models\Trip::factory(10)->create();
-        \App\Models\Jeep::factory(10)->create();
-        \App\Models\Revenue::factory(1000)->create();
+//        \App\Models\Jeep::factory(10)->create();
+//        \App\Models\Revenue::factory(10)->create();
         // \App\Models\Fares::factory(10)->create();
         // \App\Models\Places::factory(10)->create();
 

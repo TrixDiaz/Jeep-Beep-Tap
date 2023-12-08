@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Card;
 
 class Revenue extends Model
 {
@@ -19,4 +20,9 @@ class Revenue extends Model
         'name',
         'discount'
     ];
+
+    public function card()
+    {
+        return $this->belongsTo(Card::class, 'card_id', 'card_id');
+    }
 }

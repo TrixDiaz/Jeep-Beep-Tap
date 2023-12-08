@@ -51,7 +51,7 @@ class JeepRevenue extends Component
 
     public function break()
     {
-        
+
 
         $auth = Auth::user();
 
@@ -63,7 +63,7 @@ class JeepRevenue extends Component
                 $jeep->status = 'pending';
                 $jeep->save();
                 flash()->addSuccess('Request Sent Successfully');
-              
+
 
                  // You can add additional logic here as per your requirements
                 Notification::make()
@@ -76,7 +76,7 @@ class JeepRevenue extends Component
                     $query->where('id', [1, 2]);
                 })->get());
 
-                $usersToNotify->push(Auth::user()); 
+                $usersToNotify->push(Auth::user());
 
                 return redirect()->to('/driver');
             } else {
@@ -90,8 +90,8 @@ class JeepRevenue extends Component
 
     public function lunch()
     {
-        
-        
+
+
         $auth = Auth::user();
 
         if ($auth) {
@@ -119,15 +119,15 @@ class JeepRevenue extends Component
                     $query->where('id', [1, 2]);
                 })->get());
 
-                $usersToNotify->push(Auth::user()); 
+                $usersToNotify->push(Auth::user());
         }
     }
-    
+
 
     public function driving()
     {
 
-    
+
 
         $auth = Auth::user();
         // Check if the user has an assigned trip and is marked as the driver
@@ -155,7 +155,7 @@ class JeepRevenue extends Component
                     $query->where('id', [1, 2]);
                 })->get());
 
-                $usersToNotify->push(Auth::user()); 
+                $usersToNotify->push(Auth::user());
             // Display a success message
             flash()->addSuccess(' Driving Time updated Successfully');
             return redirect()->to('/driver');
@@ -169,7 +169,7 @@ class JeepRevenue extends Component
     public function departure()
     {
 
-       
+
 
         $auth = Auth::user();
 
@@ -208,7 +208,7 @@ class JeepRevenue extends Component
                     $query->where('id', [1, 2]);
                 })->get());
 
-                $usersToNotify->push(Auth::user()); 
+                $usersToNotify->push(Auth::user());
             // Display a success message
             flash()->addSuccess('Departure Time updated Successfully');
             return redirect()->to('/driver');
@@ -222,7 +222,7 @@ class JeepRevenue extends Component
     public function failed()
     {
 
-      
+
 
         $auth = Auth::user();
 
@@ -251,7 +251,7 @@ class JeepRevenue extends Component
                     $query->where('id', [1, 2]);
                 })->get());
 
-                $usersToNotify->push(Auth::user()); 
+                $usersToNotify->push(Auth::user());
             // Display a success message
             flash()->addSuccess('Failure Departure Time updated Successfully');
             return redirect()->to('/driver');
@@ -264,7 +264,7 @@ class JeepRevenue extends Component
 
     public function updateQueue()
     {
-     
+
 
         $auth = auth()->user(); // Get the authenticated user
 
@@ -291,8 +291,8 @@ class JeepRevenue extends Component
                         $usersToNotify =    User::whereHas('roles', function ($query) {
                         $query->where('id', [1, 2]);
                     })->get())->broadcast($usersToNotify);
-    
-                    $usersToNotify->push(Auth::user()); 
+
+                    $usersToNotify->push(Auth::user());
 
                 // event(new DatabaseNotificationsSent($user));
 
@@ -313,14 +313,14 @@ class JeepRevenue extends Component
         } else {
             // Find the card with the given card_id in the Cards table
             $card = Card::where('card_id', $this->cardid)->first();
-    
+
             if (!$card) {
                 // Card not found
                 flash()->addError('Error: Card not Registered');
             } else {
                 // Check if card_balance is enough for fare
                 $isCardBalanceEnough = $card->card_balance >= $this->fare;
-    
+
                 if ($isCardBalanceEnough) {
                     // Determine the discount based on the selected radio button option
                     $discountPercentage = 0;
@@ -329,15 +329,15 @@ class JeepRevenue extends Component
                     } elseif ($this->discount === 'senior') {
                         $discountPercentage = 0.2; // 20% discount for seniors
                     }
-    
+
                     // Calculate the discounted fare
                     $discountedFare = $this->fare * (1 - $discountPercentage);
-    
+
                     DB::transaction(function () use ($card, $discountedFare) {
                         // Subtract the fare from card_balance in the Cards table and update it
                         $card->card_balance -= $discountedFare;
                         $card->save();
-    
+
                         // Update the revenues table with status and card_balance
                         Revenue::create([
                             'card_id' => $this->cardid,
@@ -348,7 +348,7 @@ class JeepRevenue extends Component
                             'card_balance' => $card->card_balance,
                         ]);
                     });
-    
+
                     flash()->addSuccess('Payment Success');
                 } else {
                     flash()->addError('Insufficient Balance');
@@ -357,16 +357,17 @@ class JeepRevenue extends Component
         }
         // Clear the input field after successful insertion or if the card is not found
         $this->cardid = null;
-    
+
         // You can optionally redirect the user after adding the record
         return redirect()->to('/driver');
     }
-    
+
 
     public function render()
     {
         $userName = $this->user = Auth::user()->name;
         $items = Revenue::orderBy('id', 'DESC')->get();
+        $items = Revenue::with('card')->orderBy('id', 'DESC')->get();
 
         $triplogs = Triplog::where('driver', $userName)->paginate(5);
 
@@ -398,7 +399,7 @@ class JeepRevenue extends Component
             [
                 'items' => Revenue::orderBy('id', 'desc')->paginate(5),
             ],
-            compact('items', 'trips', 'triplogs', 'cardData', 'jnumber'),
+            compact('items', 'trips', 'triplogs', 'cardData', 'jnumber','holder'),
         );
     }
 }

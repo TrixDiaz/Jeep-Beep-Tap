@@ -1,4 +1,4 @@
-<div>  
+<div>
         {{-- Action Buttons --}}
         <div class="relative p-3 m-5">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -240,6 +240,9 @@
                                                 Card ID
                                             </th>
                                             <th scope="col" class="px-6 py-3">
+                                                Card Holder
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
                                                 Fare
                                             </th>
                                             <th scope="col" class="px-6 py-3">
@@ -261,6 +264,9 @@
                                             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                 <th class="px-6 py-4">
                                                     {{ $item->card_id }}
+                                                </th>
+                                                <th class="px-6 py-4">
+                                                    {{ $item->card->name }}
                                                 </th>
                                                 <td class="px-6 py-4">
                                                     {{ $item->fare }}

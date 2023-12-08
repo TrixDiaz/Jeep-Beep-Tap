@@ -61,7 +61,7 @@ class JeepResource extends Resource
                                 ->pluck('users.name', 'users.name')
                                 ->toArray(),
                         )
-                        ->visibleOn('edit')
+                        ->visibleOn(['edit','create'])
                         ->native(false),
 
                     Select::make('queue')
@@ -70,7 +70,7 @@ class JeepResource extends Resource
                             '' => 'Reset',
                             Carbon::now('Asia/Manila')->format('H:i') => 'Add to Jeep Queue',
                         ])
-                        ->visibleOn('edit')
+                        ->visibleOn(['edit','create'])
                         ->native(false),
                 ])
                 ->columns(2),
@@ -84,7 +84,7 @@ class JeepResource extends Resource
                             '' => 'Reset',
                             Carbon::now('Asia/Manila')->format('Y-m-d H:i') => 'Time IN',
                         ])
-                        ->visibleOn('edit')
+                        ->visibleOn(['edit','create'])
                         ->native(false),
 
                     Select::make('end')
@@ -93,7 +93,7 @@ class JeepResource extends Resource
                             '' => 'Reset',
                             Carbon::now('Asia/Manila')->format('Y-m-d H:i') => 'Time OUT',
                         ])
-                        ->visibleOn('edit')
+                        ->visibleOn(['edit','create'])
                         ->native(false),
                 ])
                 ->columns(2),

@@ -91,7 +91,7 @@
                 <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
 
                 </p>
-                <a href=""
+                <a href="{{ route('login') }}"
                     class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                     Get started
                     <i class="fa fa-arrow-right ml-2 -mr-1 text-[1.1rem]"></i>
@@ -231,7 +231,7 @@
                 </p>
                 <a href="{{ route('login') }}"
                     class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                    Learn more
+                    Get Started
 
                     <i class="fa fa-chevron-right ml-1 mt-1 text-[1.2rem]" aria-hidden="true"></i>
                 </a>
@@ -325,7 +325,7 @@
                         </button>
                         <div x-show="openFaq1" class="faq-content pl-[62px]">
                             <p class="py-3 text-base leading-relaxed text-body-color">
-                            The integration of multiple technologies and systems to provide seamless and automated payment processes for public transportation services is referred to as automated fare collection (AFC). 
+                            The integration of multiple technologies and systems to provide seamless and automated payment processes for public transportation services is referred to as automated fare collection (AFC).
                             The major purpose of AFC is to improve the efficiency, convenience, and usability of fare payment and collection for passengers while also streamlining operations for transportation providers.
                             </p>
                         </div>
@@ -368,7 +368,7 @@
                         </button>
                         <div x-show="openFaq4" class="faq-content pl-[62px]">
                             <p class="py-3 text-base leading-relaxed text-body-color">
-                            A modern jeepney is an enhanced version of the classic jeepney, which is a common method of public transportation in the Philippines. 
+                            A modern jeepney is an enhanced version of the classic jeepney, which is a common method of public transportation in the Philippines.
                             The traditional jeepney is a colorful and distinctively designed vehicle that evolved from surplus military jeeps left by the United States after World War II, which were modified and transformed into low-cost public transportation options, primarily used for short-distance travel within cities and towns.
                             </p>
                         </div>
