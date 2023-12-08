@@ -1,6 +1,6 @@
 <div>
     <div
-        class="bg-center bg-[url('image/jeep.webp')]">
+        class="bg-center bg-[url('/image/jeep.png')]">
         <div class="flex items-center justify-center h-80 fit pt-4 px-10">
             <form wire:submit.prevent="search" class="mb-4 sm:w-1/2 lg:w-1/3 z-10">
                 <div class="flex flex-col">
