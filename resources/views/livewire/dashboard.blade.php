@@ -38,7 +38,7 @@
 
                     {{-- Filter Search Button --}}
                     <button type="submit"
-                        class="p-2.5 ml-2 text-sm font-medium text-white bg-transparent rounded-lg border border-stone-100 hover:bg-stone-400 focus:ring-w-4 focus:outline-none focus:ring-stone-100 dark:bg-stone-400 dark:hover:bg-stone-500 dark:focus:ring-stone-600">
+                        class="p-2.5 ml-2 text-sm font-medium text-slate-950 bg-transparent rounded-lg border border-stone-100 hover:bg-slate-800 focus:ring-w-4 focus:outline-none focus:ring-stone-100 dark:bg-stone-400 dark:hover:bg-stone-500 dark:focus:ring-stone-600">
 
 
                         <span class="capitalize font-semibold text-lg">Search</span>
@@ -46,7 +46,7 @@
 
                     {{-- Reload Page Button  --}}
                     <button wire:click="reloadPage"
-                        class="p-2.5 ml-2 text-sm font-medium text-white bg-none-700 rounded-lg border white-red-700 hover:bg-stone-400 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                        class="p-2.5 ml-2 text-sm font-medium text-slate-900 bg-none-700 rounded-lg border white-red-700 hover:bg-stone-400 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
