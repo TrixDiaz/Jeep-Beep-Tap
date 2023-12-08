@@ -399,7 +399,7 @@ class JeepRevenue extends Component
             [
                 'items' => Revenue::orderBy('id', 'desc')->paginate(5),
             ],
-            compact('items', 'trips', 'triplogs', 'cardData', 'jnumber','holder'),
+            compact('items', 'trips', 'triplogs', 'cardData', 'jnumber'),
         );
     }
 }
