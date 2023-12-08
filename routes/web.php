@@ -19,7 +19,12 @@ use Jenssegers\Agent\Agent;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/terms', function () {
+   return view('terms');
+});
+Route::get('/policy', function () {
+    return view('policy');
+});
 
 Route::get('/', function () {
     $agent = new Agent();
