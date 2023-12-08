@@ -25,7 +25,7 @@
                     class="pointer-events-none absolute right-7 h-auto w-full translate-x-[100%] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
                     <div
                         class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-                        
+
                         <div class="relative flex flex-auto p-4" data-te-modal-body-ref>
                             <div
                         class="w-full h-full m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
@@ -128,7 +128,7 @@
                             <ul class="grid w-full gap-6 md:grid-cols-3">
                                 <li class="mx-5">
                                     <input  type="radio" id="credits" name="credits" value="100" class="hidden peer" checked required>
-                                    <label for="credits" class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+                                    <label for="credits" class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">100</div>
                                         </div>
@@ -199,7 +199,7 @@
                                 <x-label for="credits" value="{{ __('Credits') }}" />
                                 <x-input wire:model="credits" id="credits" class="block mt-1 w-full md:w-92 mx-auto"
                                     type="text" name="credits" required autofocus autocomplete="credits"
-                                    placeholder="amount" required 
+                                    placeholder="amount" required
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" />
 
                             </div> --}}
@@ -297,6 +297,9 @@
                                         Card ID
                                     </th>
                                     <th scope="col" class="px-6 py-3">
+                                        Card Holder
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
                                         Amount
                                     </th>
                                     <th scope="col" class="px-6 py-3">
@@ -314,6 +317,10 @@
                                         <th scope="row"
                                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             {{ $card->card_id }}
+                                        </th>
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{ $card->name }}
                                         </th>
                                         <td class="px-6 py-4">
                                             {{ $card->amount }}
@@ -344,6 +351,8 @@
                                     <div class="py-2 text-center">
                                         <div class="p-4 bg-slate-50 bg-opacity-75 shadow-lg rounded-md">
                                             <p class="text-md font-semibold text-red-500">Date {{ $card->card_id }}
+                                            </p>
+                                            <p class="text-md font-semibold text-red-500">Date {{ $card->card_name }}
                                             </p>
                                             <p class="text-md font-semibold text-red-400">Time {{ $card->amount }}</p>
                                             <p class="text-md font-semibold text-red-500">Price {{ $card->status }}
