@@ -39,8 +39,7 @@ class JeepResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form->title('Assign Jeep') // Change the form title here
-            ->schema([
+        return $form->schema([
             Fieldset::make('Jeep')->schema([
                 TextInput::make('jnumber')
                     ->label('Plate Number')

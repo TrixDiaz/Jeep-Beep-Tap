@@ -13,12 +13,15 @@ class CreateJeep extends CreateRecord
 {
     protected static string $resource = JeepResource::class;
 
+    public function getTitle(): string
+    {
+        return __('Assign Jeep'); // Update the heading here
+    }
+
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
     }
-
-
 
     protected function getCreatedNotificationTitle(): ?string
     {
