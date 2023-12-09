@@ -93,7 +93,7 @@
                 <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
 
                 </p>
-                <a href="{{ route('login') }}"
+                <a href="{{ route('register') }}"
                     class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                     Get started
                     <i class="fa fa-arrow-right ml-2 -mr-1 text-[1.1rem]"></i>
